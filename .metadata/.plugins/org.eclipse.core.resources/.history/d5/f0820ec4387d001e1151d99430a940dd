@@ -1,0 +1,14 @@
+package javafundamentals;
+
+public class SavingsAccount extends BankAccount{
+	SavingsAccount(int accountNumber, String accountName, int initialBalance){
+		super(accountNumber, accountName,initialBalance);
+	};
+	
+	void display() {
+		System.out.print("Account Number = " + accountNumber);
+		System.out.print("Account Name = " + accountName);
+		System.out.print("Account Number = Savings Account");
+		System.out.print("Initial Balance = " + initialBalance + "\n");
+	};
+};
