@@ -1,22 +1,23 @@
 package javafundamentals;
 
-public class BankAccount {
-	public int accountNumber;
-	public String accountName;
-	public String accountType;
-	public int initialBalance;
+class BankAccount {
+	int accountNumber;
+	String accountName;
+	String accountType;
+	int initialBalance;
+	String accountStatus;
 	
-	public BankAccount(int accountNumber, String accountName, int initialBalance) {
+	BankAccount(int accountNumber, String accountName, int initialBalance) {
 		this.accountNumber = accountNumber;
 		this.accountName = accountName;
 		this.initialBalance = initialBalance;
 	};
 	
-	public int deposit(int cash) {
+	int deposit(int cash) {
 		return initialBalance += cash;
 	};
 	
-	public int withdraw(int cash) {
-		return initialBalance += cash;
+	int withdraw(int cash) {
+		return initialBalance -= cash;
 	};
 }

@@ -1,7 +1,6 @@
 package javafundamentals;
 
 public class Main {
-
 	public static void main(String[] args) {
 		SavingsAccount s = new SavingsAccount(123,"Kurt",5000);
 		CheckingAccount c = new CheckingAccount(12345,"John Mark",100000);
@@ -11,7 +10,8 @@ public class Main {
 		s.display();
 		c.withdraw(20500);
 		c.display();
-
+		Transactions.BankTransactions(s,"deposit",500);
+		Transactions.BankTransactions(s,"withdraw",1200);
+		Transactions.BankTransactions(c,"withdraw",250);
 	}
-
 }

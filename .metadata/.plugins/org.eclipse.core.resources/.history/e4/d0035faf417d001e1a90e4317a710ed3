@@ -1,0 +1,29 @@
+package javafundamentals;
+
+public class Transactions {
+	static void BankTransactions(BankAccount account,String operation, int cash) {
+		System.out.println("Account Number = " + account.accountNumber);
+		System.out.println("Account Name = " + account.accountName);
+		if(operation == "deposit") {
+	        account.deposit(cash); //access deposit method
+	        System.out.println("-------------------------");
+	        System.out.println("Transaction:");
+	        System.out.println("/tDeposited: " + cash);
+	        System.out.println("-------------------------");
+		}else if(operation == "withdraw") {
+	        account.withdraw(cash); //access withdraw method
+	        System.out.println("Withdrawn: " + cash);
+		}
+
+		System.out.println("Account Number = " + account.accountType);
+		System.out.println("Initial Balance = " + account.initialBalance);
+		
+        // Checking if the initial balance is less than 100 to determine account status
+        if (account.initialBalance < 100) {
+            account.accountStatus = "Closed \n";
+        } else {
+            account.accountStatus = "Active \n";
+        }
+        System.out.println("Account Status: " + account.accountStatus);
+    }
+}

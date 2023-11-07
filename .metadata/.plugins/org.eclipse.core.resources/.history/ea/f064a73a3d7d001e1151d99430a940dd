@@ -1,0 +1,19 @@
+package javafundamentals;
+
+public class Transactions {
+	static void operateAccount(BankAccount account, cash) {
+        int depositedAmount = account.deposit(cash);
+        System.out.println("Deposited: " + depositedAmount);
+
+        int withdrawnAmount = account.withdraw(cash);
+        System.out.println("Withdrawn: " + withdrawnAmount);
+
+        // Checking if the initial balance is less than 100 to determine account status
+        if (account.initialBalance < 100) {
+            account.accountStatus = "Closed";
+        } else {
+            account.accountStatus = "Active";
+        }
+        System.out.println("Account Status: " + account.accountStatus);
+    }
+}
